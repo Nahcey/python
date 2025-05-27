@@ -1,0 +1,49 @@
+tft match_data api keys
+
+1. metadata
+
+['data_version', 'match_id', 'participants']
+
+
+
+2. info
+
+['endOfGameResult', 'gameCreation', 'gameId', 'game_datetime', 'game_length', 'game_version', 'mapId', 'participants', 'queueId', 'queue_id', 'tft_game_type', 'tft_set_core_name', 'tft_set_number']
+
+
+tft_game_type       #standard(랭겜 판단기준 x)
+
+tft_set_core_name  #TFTSet14
+
+tft_set_number      #14
+
+queue_id         # rank: 1100, standard: 1090
+
+
+
+
+participants <----------------------  list (len = 8)
+
+['companion', 'gold_left', 'last_round', 'level', 'missions', 'placement', 'players_eliminated', 'puuid', 'riotIdGameName', 'riotIdTagline', 'time_eliminated', 'total_damage_to_players', 'traits', 'units', 'win']
+
+
+riotIdGameName  #실제닉
+win                   #순방 (Boolean)
+placement          #순위
+
+traits <-------list (len = (필드에 보이는 시너지개수))
+
+['name', 'num_units', 'style', 'tier_current', 'tier_total']
+
+num_units     #해당특성가진유닛수
+style            #해당특성활성화단계(
+tier_current   #해당특성활성화단계 (int(안켜지면 0))
+tier_total       #해당특성의최대단계
+
+
+               
+
+
+
+match_data['info']['participants'][i]['riotIdGameName']
+match_data['info']['queue_id']
